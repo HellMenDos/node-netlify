@@ -1,0 +1,117 @@
+header {
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  box-shadow: var(--shadow-md);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  border-bottom: 1px solid var(--border-color);
+  transition: all 0.3s ease;
+}
+
+.header__inner {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 1.25rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.logo {
+  text-align: center;
+  font-weight: 700;
+  font-size: 1.4rem;
+  letter-spacing: -0.02em;
+  background: var(--gradient-primary);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  transition: transform 0.3s ease;
+}
+
+.logo:hover {
+  transform: scale(1.05);
+}
+
+.logo span {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  font-weight: 800;
+}
+
+.navigate {
+  display: flex;
+  gap: 2.5rem;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.navigate > div {
+  position: relative;
+}
+
+.navigate a {
+  color: var(--text-dark);
+  font-weight: 500;
+  font-size: 1rem;
+  position: relative;
+  padding: 0.5rem 0;
+  transition: color 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.navigate a::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: var(--gradient-primary);
+  transition: width 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.navigate a:hover {
+  color: var(--primary-color);
+}
+
+.navigate a:hover::after {
+  width: 100%;
+}
+
+@media (max-width: 968px) {
+  .header__inner {
+    padding: 1rem 2rem;
+  }
+
+  .navigate {
+    gap: 1.5rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .header__inner {
+    flex-direction: column;
+    gap: 1.5rem;
+    padding: 1.25rem 2rem;
+  }
+
+  .navigate {
+    gap: 1.25rem;
+    justify-content: center;
+    width: 100%;
+  }
+
+  .navigate > div {
+    text-align: center;
+  }
+
+  .logo {
+    font-size: 1.2rem;
+  }
+}
+

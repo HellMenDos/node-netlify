@@ -1,0 +1,10 @@
+/* Global App Styles */
+main {
+  width: 100%;
+  overflow-x: hidden;
+}
+
+/* Унифицированные контейнеры для всех секций */
+section {
+  width: 100%;
+}

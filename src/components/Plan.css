@@ -1,0 +1,41 @@
+.plan {
+  padding: 6rem 0;
+  background: var(--bg-white);
+  position: relative;
+}
+
+.plan__inner {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+.plan__inner__title {
+  font-size: clamp(2rem, 4vw, 3rem);
+  font-weight: 800;
+  text-align: center;
+  margin-bottom: 4rem;
+  background: var(--gradient-primary);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  letter-spacing: -0.02em;
+  animation: fadeInUp 0.6s ease-out;
+}
+
+.plan__question__container {
+  max-width: 1000px;
+  margin: 0 auto;
+  animation: fadeInUp 0.8s ease-out 0.2s both;
+}
+
+@media (max-width: 768px) {
+  .plan {
+    padding: 4rem 0;
+  }
+
+  .plan__inner {
+    padding: 0 1.5rem;
+  }
+}
+
