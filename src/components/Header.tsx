@@ -9,7 +9,7 @@ const Header: React.FC = () => {
       <div className="header__inner">
         <div className="logo">
           <div>
-            <span>ДЖАВАСКРИПТЕЗЕРЫ</span> ПРОДВИНУТЫЙ NODEJS
+            <span>ITSystem</span> ПРОДВИНУТЫЙ NODEJS
           </div>
         </div>
         <div className="navigate">

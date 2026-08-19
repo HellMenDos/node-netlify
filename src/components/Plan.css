@@ -1,11 +1,9 @@
 .plan {
-  padding: 6rem 0;
-  background: var(--bg-white);
   position: relative;
 }
 
 .plan__inner {
-  max-width: 1400px;
+  max-width: var(--container-width);
   margin: 0 auto;
   padding: 0 2rem;
 }
@@ -15,10 +13,7 @@
   font-weight: 800;
   text-align: center;
   margin-bottom: 4rem;
-  background: var(--gradient-primary);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
+  color: var(--text-primary);
   letter-spacing: -0.02em;
   animation: fadeInUp 0.6s ease-out;
 }
@@ -27,6 +22,8 @@
   max-width: 1000px;
   margin: 0 auto;
   animation: fadeInUp 0.8s ease-out 0.2s both;
+  display: grid;
+  gap: 14px;
 }
 
 @media (max-width: 768px) {

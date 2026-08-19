@@ -1,15 +1,18 @@
 .question__row {
-  border-bottom: 1px solid var(--border-color);
-  margin-bottom: 0.5rem;
-  background: var(--bg-white);
-  border-radius: 12px;
+  border: 1px solid var(--glass-border);
+  margin-bottom: 0;
+  background: var(--glass-bg);
+  border-radius: var(--radius-lg);
   overflow: hidden;
   transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-  box-shadow: var(--shadow-sm);
+  box-shadow: var(--shadow-soft);
+  backdrop-filter: blur(18px) saturate(140%);
+  -webkit-backdrop-filter: blur(18px) saturate(140%);
 }
 
 .question__row:hover {
-  box-shadow: var(--shadow-md);
+  box-shadow: var(--shadow-medium);
+  border-color: var(--glass-border-strong);
 }
 
 .question__row__title {
@@ -19,7 +22,7 @@
   cursor: pointer;
   transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
   position: relative;
-  color: var(--text-dark);
+  color: var(--text-primary);
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -27,8 +30,8 @@
 }
 
 .question__row__title:hover {
-  background: var(--bg-light);
-  color: var(--primary-color);
+  background: rgba(255, 255, 255, 0.03);
+  color: var(--text-primary);
   padding-left: 2.25rem;
 }
 
@@ -39,7 +42,7 @@
   font-size: 1.75rem;
   font-weight: 300;
   transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-  color: var(--primary-color);
+  color: var(--accent);
   line-height: 1;
   width: 30px;
   height: 30px;
@@ -47,24 +50,24 @@
   align-items: center;
   justify-content: center;
   border-radius: 50%;
-  background: rgba(99, 102, 241, 0.1);
+  background: var(--accent-subtle);
 }
 
 .question__row__title[data-open="true"] {
-  background: var(--bg-light);
-  color: var(--primary-color);
+  background: rgba(255, 255, 255, 0.03);
+  color: var(--text-primary);
 }
 
 .question__row__title[data-open="true"]::after {
   transform: rotate(45deg);
-  background: rgba(99, 102, 241, 0.2);
+  background: var(--accent-muted);
 }
 
 .question__row__describe {
   padding: 0 2rem 2rem;
   font-size: 1.05rem;
   line-height: 1.9;
-  color: var(--text-gray);
+  color: var(--text-secondary);
   animation: fadeIn 0.3s ease-out;
   font-weight: 400;
 }
